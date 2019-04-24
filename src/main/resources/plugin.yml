@@ -1,0 +1,7 @@
+name: BunnyFamily
+version: ${project.version}
+main: com.berneymark.bunnyfamily.BunnyFamily
+api-version: 1.13
+authors: [MarkBerney]
+description: Custom plugin to manage my own server.
+website: berneymark.com
