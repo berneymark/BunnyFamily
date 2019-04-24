@@ -9,6 +9,5 @@ public class OnDeath implements Listener {
     @EventHandler
     public void onDeath(PlayerDeathEvent e) {
         e.getEntity().sendMessage("RIP my friend.");
-        e.getEntity().setFlying(true);
     }
 }
