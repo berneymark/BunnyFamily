@@ -4,13 +4,8 @@ import com.berneymark.bunnyfamily.commands.*;
 import com.berneymark.bunnyfamily.events.OnDeath;
 import com.berneymark.bunnyfamily.events.OnPlayerJoin;
 import com.berneymark.bunnyfamily.events.OnPlayerLeave;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import java.util.List;
 
 public final class BunnyFamily extends JavaPlugin implements Listener {
     @Override
@@ -31,6 +26,7 @@ public final class BunnyFamily extends JavaPlugin implements Listener {
         getCommand("heal").setExecutor(new Heal());
         getCommand("feed").setExecutor(new Feed());
         getCommand("print").setExecutor(new Print());
+        getCommand("sendword").setExecutor(new SendWord());
     }
 
     @Override
