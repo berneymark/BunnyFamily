@@ -1,6 +1,9 @@
 package com.berneymark.bunnyfamily;
 
+import com.berneymark.bunnyfamily.commands.CraftingTable;
+import com.berneymark.bunnyfamily.commands.Feed;
 import com.berneymark.bunnyfamily.commands.God;
+import com.berneymark.bunnyfamily.commands.Heal;
 import com.berneymark.bunnyfamily.events.OnDeath;
 import com.berneymark.bunnyfamily.events.OnPlayerJoin;
 import com.berneymark.bunnyfamily.events.OnPlayerLeave;
@@ -30,6 +33,9 @@ public final class BunnyFamily extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new OnPlayerLeave(), this);
 
         getCommand("god").setExecutor(new God());
+        getCommand("craft").setExecutor(new CraftingTable());
+        getCommand("heal").setExecutor(new Heal());
+        getCommand("feed").setExecutor(new Feed());
     }
 
     @Override

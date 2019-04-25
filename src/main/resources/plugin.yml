@@ -6,6 +6,16 @@ authors: [MarkBerney]
 description: Custom plugin to manage my own server.
 website: berneymark.com
 commands:
-  workbench:
+  craft:
     description: Craft on the go!
+    usage: /<command>
+  heal:
+    description: Health to the max!
+    usage: /<command>
+  feed:
+    description: Food to the max!
+    usage: /<command>
+    aliases: [feedme]
+  god:
+    description: The powers of the almighty!
     usage: /<command>
