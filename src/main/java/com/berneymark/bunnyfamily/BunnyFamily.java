@@ -1,31 +1,25 @@
 package com.berneymark.bunnyfamily;
 
-import com.berneymark.bunnyfamily.commands.CraftingTable;
-import com.berneymark.bunnyfamily.commands.Feed;
-import com.berneymark.bunnyfamily.commands.God;
-import com.berneymark.bunnyfamily.commands.Heal;
+import com.berneymark.bunnyfamily.commands.*;
 import com.berneymark.bunnyfamily.events.OnDeath;
 import com.berneymark.bunnyfamily.events.OnPlayerJoin;
 import com.berneymark.bunnyfamily.events.OnPlayerLeave;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.List;
+
 public final class BunnyFamily extends JavaPlugin implements Listener {
-    @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (command.getName().equals("workbench")) {
-
-        } else sender.sendMessage("You don't need a workbench!");
-
-        return false;
-    }
-
     @Override
     public void onEnable() {
         // Plugin startup logic
         System.out.println("Running...");
+
+        getConfig().options().copyDefaults();
+        saveDefaultConfig();
 
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(new OnDeath(), this);
@@ -36,6 +30,7 @@ public final class BunnyFamily extends JavaPlugin implements Listener {
         getCommand("craft").setExecutor(new CraftingTable());
         getCommand("heal").setExecutor(new Heal());
         getCommand("feed").setExecutor(new Feed());
+        getCommand("print").setExecutor(new Print());
     }
 
     @Override

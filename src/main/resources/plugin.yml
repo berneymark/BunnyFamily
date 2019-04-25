@@ -19,3 +19,6 @@ commands:
   god:
     description: The powers of the almighty!
     usage: /<command>
+  print:
+    description: Test my config.yml!
+    usage: /<command>

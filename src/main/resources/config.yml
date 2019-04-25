@@ -1,0 +1,15 @@
+# Author: Mark Berney
+# User: TheKingOEmeralds
+# Plugin: Bunny Family
+# Version: 1.0
+
+String: 'nashi pear'
+Number: 125
+Boolean: true
+List:
+  - 'apple'
+  - 'orange'
+  - 'banana'
+  - 'nectarine'
+  - 'peach'
+  - 'grape'
