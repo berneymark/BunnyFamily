@@ -4,14 +4,17 @@ import com.berneymark.bunnyfamily.commands.*;
 import com.berneymark.bunnyfamily.events.OnDeath;
 import com.berneymark.bunnyfamily.events.OnPlayerJoin;
 import com.berneymark.bunnyfamily.events.OnPlayerLeave;
+import org.bukkit.Material;
+import org.bukkit.entity.Item;
 import org.bukkit.event.Listener;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class BunnyFamily extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        System.out.println("Running...");
+        System.out.println("The Bunny Family Server Management Plugin has started up...");
 
         getConfig().options().copyDefaults();
         saveDefaultConfig();
@@ -28,6 +31,7 @@ public final class BunnyFamily extends JavaPlugin implements Listener {
         getCommand("print").setExecutor(new Print());
         getCommand("sendword").setExecutor(new SendWord());
         getCommand("murder").setExecutor(new Murder());
+        getCommand("vault").setExecutor(new Vault());
     }
 
     @Override

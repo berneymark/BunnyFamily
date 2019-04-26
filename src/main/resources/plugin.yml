@@ -28,3 +28,6 @@ commands:
   murder:
     description:
     usage: /<command>
+  vault:
+    description: Open a portable vault!
+    usage: /<command>
