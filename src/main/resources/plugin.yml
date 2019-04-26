@@ -22,3 +22,9 @@ commands:
   print:
     description: Test my config.yml!
     usage: /<command>
+  sendword:
+    description: Test command arguments!
+    usage: /<command>
+  murder:
+    description:
+    usage: /<command>

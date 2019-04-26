@@ -27,6 +27,7 @@ public final class BunnyFamily extends JavaPlugin implements Listener {
         getCommand("feed").setExecutor(new Feed());
         getCommand("print").setExecutor(new Print());
         getCommand("sendword").setExecutor(new SendWord());
+        getCommand("murder").setExecutor(new Murder());
     }
 
     @Override
